@@ -1,3 +1,6 @@
+/* Assignment2, Franz Cadiente 301098663, 10/18/2020
+ */
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');

@@ -1,3 +1,6 @@
+/* Assignment2, Franz Cadiente 301098663, 10/18/2020
+ */
+
 // require modules for User model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
