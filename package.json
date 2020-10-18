@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/franzcad1/Assignment1FINAL.git"
+    "url": "git+https://github.com/franzcad1/Assignment2.git"
   },
   "author": "Franz Cadiente",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/franzcad1/Assignment1FINAL/issues"
+    "url": "https://github.com/franzcad1/Assignment2/issues"
   },
-  "homepage": "https://github.com/franzcad1/Assignment1FINAL#readme"
+  "homepage": "https://github.com/franzcad1/Assignment2#readme"
 }
