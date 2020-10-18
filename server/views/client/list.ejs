@@ -1,0 +1,51 @@
+<% include ../partials/header.ejs%>
+<% include ../partials/main_nav.ejs%>
+  
+  <!--Main Content -->
+  <main class="contatiner">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-5">
+            <h1> <%= title %> </h1>
+            <br>
+            <a href="/client-list/add" class="btn btn-success" role ="button"> 
+            <i class="fas fa-plus-circle">Add a Client</i>
+            </a>
+            <br>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Number</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                </tr>
+                <!-- Repeatable Template Row -->
+                <% for(let count = 0; count < ClientList.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= ClientList[count].name %></td>
+                        <td class="text-center"><%= ClientList[count].number %></td>
+                        <td class="text-center"><%= ClientList[count].email %></td>
+                      
+                        <td class="text-center">
+                            <a href="/client-list/edit/<%= ClientList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"> Edit </i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/client-list/delete/<%= ClientList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash alt"> Delete </i></a>
+                        </td>
+                     
+                    </tr>
+                <%}%>
+
+            </table>
+        </div>
+    </div>
+  </main>
+
+
+<% include ../partials/bottom_nav.ejs%>
+<% include ../partials/footer.ejs%>
+ 
