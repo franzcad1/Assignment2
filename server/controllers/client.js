@@ -6,15 +6,14 @@ let mongoose = require('mongoose');
 let Client = require('../models/client');
 
 module.exports.displayClientList = (req, res, next)=> {
-    Client.find((err, clientList) => {
+    Client.find({}).sort([['name', 1]]).exec(function (err,clientList) {
         if(err)
         {
             return console.error(err);
         }
         else
         {
-            //console.log(ClientList);
-            res.render('client/list', {title: 'Clients', ClientList: clientList, displayName: req.user ? req.user.displayName : ''});
+            res.render('client/list', {title: 'Business Contacts', ClientList: clientList, displayName: req.user ? req.user.displayName : ''});
         }
     });
 }
@@ -55,7 +54,7 @@ module.exports.displayEditPage = (req,res,next)=> {
         else
         {
             //show edit view
-            res.render('client/edit', {title: 'Edit Client', client: clientToEdit, name: req.user ? req.user.name : ''})
+            res.render('client/edit', {title: 'Update Client', client: clientToEdit, displayName: req.user ? req.user.displayName : ''})
         }
     });
 }

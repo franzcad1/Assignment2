@@ -23,6 +23,13 @@
           <a class="nav-link" href="/about"><i class="fas fa-info"></i> About Me </a>
         </li>
 
+         <% if (title == "Contact"){ %>
+        <li class ="nav-item active">
+        <% } else { %>
+        <% } %>
+          <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me </a>
+        </li>
+
         <% if (title == "Projects"){ %>
         <li class ="nav-item active">
         <% } else { %>
@@ -37,18 +44,13 @@
           <a class="nav-link" href="/services"><i class="fas fa-cogs"></i> Services </a>
         </li>
 
-        <% if (title == "Contact"){ %>
-        <li class ="nav-item active">
-        <% } else { %>
-        <% } %>
-          <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me </a>
-        </li>
+       
 
          <% if (title == "Clients"){ %>
         <li class ="nav-item active">
         <% } else { %>
         <% } %>
-          <a class="nav-link" href="/client-list"><i class="far fa-id-card"></i> Clients </a>
+          <a class="nav-link" href="/client-list"><i class="far fa-id-card"></i> Business Contacts </a>
         </li>
         
         

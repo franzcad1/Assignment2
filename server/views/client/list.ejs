@@ -4,8 +4,9 @@
   <!--Main Content -->
   <main class="contatiner">
     <div class="row">
-        <div class="col-md-offset-1 col-md-5">
-            <h1> <%= title %> </h1>
+        <div class="container">
+        <div class="table">
+            <h1 class="display-4"><%= title %></h1>
             <br>
             <a href="/client-list/add" class="btn btn-success" role ="button"> 
             <i class="fas fa-plus-circle">Add a Client</i>
@@ -30,7 +31,7 @@
                       
                         <td class="text-center">
                             <a href="/client-list/edit/<%= ClientList[count]._id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"> Edit </i></a>
+                            <i class="fas fa-pencil-alt"> Update </i></a>
                         </td>
                         <td class="text-center">
                             <a href="/client-list/delete/<%= ClientList[count]._id %>" class="btn btn-danger btn-sm">
@@ -42,6 +43,7 @@
 
             </table>
         </div>
+    </div>
     </div>
   </main>
 
